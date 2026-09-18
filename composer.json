@@ -2,13 +2,28 @@
     "name": "dnadesign/silverstripe-alert-banners",
     "description": "Generic Alert Banners - generally displayed at the top of a page.",
     "license": "BSD-3-Clause",
+    "type": "silverstripe-vendormodule",
     "require": {
-      "undefinedoffset/sortablegridfield": "^2"
+        "php": "^8.3",
+        "silverstripe/framework": "^6.0",
+        "silverstripe/cms": "^6.0",
+        "silverstripe/htmleditor-tinymce": "^1.0",
+        "undefinedoffset/sortablegridfield": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DNADesign\\AlertBanners\\": "src/"
+        }
     },
     "extra": {
         "installer-name": "silverstripe-alert-banners",
         "expose": [
             "client/dist"
-        ]
-    }
+        ],
+        "branch-alias": {
+            "dev-silverstripe-6": "2.0.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
